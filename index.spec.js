@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest"
-import { l } from "./index"
+import { createMnemonic,bip39 } from "./index"
 describe("12 words",()=>{
     it('array',()=>{
-        expect(l.length).toBe(12)
+        const mnemonic = createMnemonic();
+        expect(mnemonic.split(" ").length).toBe(12)
     })
 })
